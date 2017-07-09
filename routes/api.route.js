@@ -56,6 +56,7 @@ router.delete('/products/:id', async (req, res, next) => {
     })
 
     res.json(deletedProduct);
+    
   } catch (error) {
     next(error)
   }
