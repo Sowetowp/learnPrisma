@@ -54,7 +54,8 @@ router.delete('/products/:id', async (req, res, next) => {
     const deletedProduct = await prisma.product.delete({
       where: { id: Number(id) }
     })
-    res.json(deletedProduct)
+
+    res.json(deletedProduct);
   } catch (error) {
     next(error)
   }
