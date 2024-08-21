@@ -16,4 +16,5 @@ datasource db {
 model product{
   id Int @id @default(autoincrement())
   name String @unique
+  price Int @default(999)
 }
