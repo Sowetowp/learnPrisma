@@ -13,13 +13,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model product{
+model Product{
   id Int @id @default(autoincrement())
   name String @unique
   price Int @default(999)
   createdAt DateTime @default(now())
 }
 
-model category{
-  
+model Category{
+id Int @default(autoincrement())
 }
