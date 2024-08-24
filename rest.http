@@ -4,5 +4,6 @@ GET http://localhost:3000/api/products
 POST http://localhost:3000/api/products
 Content-Type: 'application/json'
 {
-    name: "iph"
+    name: "iphone 12 pro",
+    
 }
