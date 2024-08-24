@@ -22,7 +22,11 @@ router.get('/products/:id', async (req, res, next) => {
 });
 
 router.post('/products', async (req, res, next) => {
-  res.send({ message: 'Ok api is working 🚀' });
+  try {
+    
+  } catch (error) {
+    next(error)
+  }
 });
 
 router.delete('/products/:id', async (req, res, next) => {
