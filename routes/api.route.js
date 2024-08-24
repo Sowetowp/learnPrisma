@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {} = require
+const {} = require("@prisma/client")
 
 router.get('/products', async (req, res, next) => {
   
