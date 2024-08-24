@@ -21,6 +21,6 @@ model Product {
 }
 
 model Category {
-  id Int @default(autoincrement())
+  id   Int    @id @default(autoincrement())
   name String @unique
 }
