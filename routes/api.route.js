@@ -1,7 +1,8 @@
 const router = require('express').Router();
+const {} = require
 
 router.get('/products', async (req, res, next) => {
-  res.send({ message: 'Ok api is working 🚀' });
+  
 });
 
 router.get('/products/:id', async (req, res, next) => {
