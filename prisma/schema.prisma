@@ -22,5 +22,5 @@ model Product {
 
 model Category {
   id Int @default(autoincrement())
-  name 
+  name String @unique
 }
