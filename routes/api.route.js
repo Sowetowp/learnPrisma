@@ -4,7 +4,7 @@ const { PrismaClient } = require("@prisma/client")
 const prisma = new PrismaClient()
 router.get('/products', async (req, res, next) => {
 try {
-  c
+  const products = await 
 } catch (error) {
   next(error)
 }
