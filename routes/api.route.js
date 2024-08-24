@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const {} = require("@prisma/client")
+const { PrismaClient } = require("@prisma/client")
 
 router.get('/products', async (req, res, next) => {
-  
+
 });
 
 router.get('/products/:id', async (req, res, next) => {
