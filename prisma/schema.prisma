@@ -19,3 +19,4 @@ model product{
   price Int @default(999)
   createdAt DateTime @default(now())
 }
+
