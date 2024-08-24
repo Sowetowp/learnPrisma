@@ -16,7 +16,7 @@ router.delete('/products/:id', async (req, res, next) => {
   res.send({ message: 'Ok api is working 🚀' });
 });
 
-router.patch('/products', async (req, res, next) => {
+router.patch('/products/:id', async (req, res, next) => {
   res.send({ message: 'Ok api is working 🚀' });
 });
 
