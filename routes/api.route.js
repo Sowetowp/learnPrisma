@@ -4,7 +4,7 @@ const { PrismaClient } = require("@prisma/client")
 const prisma = new PrismaClient()
 router.get('/products', async (req, res, next) => {
 try {
-  const products = await prisma.
+  const products = await prisma.product.findMany({})
 } catch (error) {
   next(error)
 }
