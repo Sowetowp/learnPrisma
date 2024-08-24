@@ -7,8 +7,10 @@ router.get('/products', async (req, res, next) => {
     const products = await prisma.product.findMany({
       include: { category: true }
     })
-    const categories = await prisma.category.findMany({})
-    
+    const categories = await prisma.category.findMany({
+      include: { products: true }
+    })
+
     res.json({ products, categories })
   } catch (error) {
     next(error)
