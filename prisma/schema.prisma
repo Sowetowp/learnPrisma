@@ -20,3 +20,6 @@ model product{
   createdAt DateTime @default(now())
 }
 
+model category{
+  
+}
