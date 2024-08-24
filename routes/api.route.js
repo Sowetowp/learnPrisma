@@ -3,7 +3,11 @@ const { PrismaClient } = require("@prisma/client")
 
 const prisma = new PrismaClient()
 router.get('/products', async (req, res, next) => {
-
+try {
+  
+} catch (error) {
+  next(error)
+}
 });
 
 router.get('/products/:id', async (req, res, next) => {
