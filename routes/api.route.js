@@ -30,6 +30,7 @@ router.post('/products', async (req, res, next) => {
         price: data.price
       }
     })
+    res.json()
   } catch (error) {
     next(error)
   }
