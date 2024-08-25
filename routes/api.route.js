@@ -26,7 +26,8 @@ router.post('/products', async (req, res, next) => {
     const data =  req.body
     const product = await prisma.product.create({
       data: {
-        name: data.name
+        name: data.name,
+        price: data.price
       }
     })
   } catch (error) {
