@@ -21,7 +21,7 @@ router.get('/products/:id', async (req, res, next) => {
   try {
     res.send({ message: 'Ok api is working 🚀' });
   } catch (error) {
-    
+    next(error)
   }
 });
 
