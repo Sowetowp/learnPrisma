@@ -18,7 +18,11 @@ router.get('/products', async (req, res, next) => {
 });
 
 router.get('/products/:id', async (req, res, next) => {
-  res.send({ message: 'Ok api is working 🚀' });
+  try {
+    res.send({ message: 'Ok api is working 🚀' });
+  } catch (error) {
+    
+  }
 });
 
 router.post('/products', async (req, res, next) => {
