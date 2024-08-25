@@ -27,7 +27,8 @@ router.post('/products', async (req, res, next) => {
     const product = await prisma.product.create({
       data: {
         name: data.name,
-        price: data.price
+        price: data.price,
+        categoryId:data.categoryId
       }
     })
     res.json()
