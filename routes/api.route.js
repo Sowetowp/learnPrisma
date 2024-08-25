@@ -23,15 +23,15 @@ router.get('/products/:id', async (req, res, next) => {
 
 router.post('/products', async (req, res, next) => {
   try {
-    const data =  req.body
+    const data = req.body
     const product = await prisma.product.create({
       data: {
         name: data.name,
         price: data.price,
-        categoryId:data.categoryId
+        categoryId: data.categoryId
       }
     })
-    res.json()
+    res.json(product)
   } catch (error) {
     next(error)
   }
