@@ -61,7 +61,7 @@ router.delete('/products/:id', async (req, res, next) => {
 router.patch('/products/:id', async (req, res, next) => {
   try {
     const { id } = req.params
-    const deletedProduct = await prisma.product.delete({
+    const deletedProduct = await prisma.product.update({
       where: { id: Number(id) }
     })
     res.json(deletedProduct)
