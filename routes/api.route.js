@@ -49,11 +49,11 @@ router.post('/products', async (req, res, next) => {
 router.delete('/products/:id', async (req, res, next) => {
   try {
     const { id } = req.params
-    const product = await prisma.product.findUnique({
+    const deletedProduct = await prisma.product.findUnique({
       where: { id: Number(id) },
       include: { category: true }
     })
-    res.json(product)
+    res.json(deletedProduct)
   } catch (error) {
     next(error)
   }
