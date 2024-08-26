@@ -8,7 +8,7 @@ POST http://localhost:3000/api/products
 Content-Type: application/json
 
 {
-    "name": "iphone 12 pro",
+    "name": "iphone 12 pro max",
     "price": 999,
     "categoryId": 1
 }
