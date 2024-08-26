@@ -64,7 +64,7 @@ router.patch('/products/:id', async (req, res, next) => {
     const updatedProduct = await prisma.product.update({
       where: { id: Number(id) }
     })
-    res.json(deletedProduct)
+    res.json(updatedProduct)
   } catch (error) {
     next(error)
   }
