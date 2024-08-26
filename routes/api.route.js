@@ -23,6 +23,7 @@ router.get('/products/:id', async (req, res, next) => {
     const product = await prisma.product.findUnique({
       where: { id: Number(id) }
     })
+    res.json(product)
   } catch (error) {
     next(error)
   }
