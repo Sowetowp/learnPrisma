@@ -21,7 +21,7 @@ router.get('/products/:id', async (req, res, next) => {
   try {
     const { id } = req.params
     const product = await prisma.product.findUnique({
-      where: { id: id }
+      where: { id: nu(id) }
     })
   } catch (error) {
     next(error)
