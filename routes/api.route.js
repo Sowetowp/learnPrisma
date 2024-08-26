@@ -19,7 +19,7 @@ router.get('/products', async (req, res, next) => {
 
 router.get('/products/:id', async (req, res, next) => {
   try {
-    const {id}
+    const {id} = req.params
   } catch (error) {
     next(error)
   }
