@@ -62,7 +62,9 @@ router.patch('/products/:id', async (req, res, next) => {
   try {
     const { id } = req.params
     const updatedProduct = await prisma.product.update({
-      where: { id: Number(id) }
+      where: { id: Number(id) },
+      data: req.body,
+      include: {category: true}
     })
     res.json(updatedProduct)
   } catch (error) {
