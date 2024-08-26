@@ -22,6 +22,6 @@ Content-Type: application/json
 
 {
     "name": "iphone 12 pro max",
-    "price": 999,
-    "categoryId": 1
+    "price": 1299,
+    "categoryId": 2
 }
