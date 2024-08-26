@@ -47,7 +47,16 @@ router.post('/products', async (req, res, next) => {
 });
 
 router.delete('/products/:id', async (req, res, next) => {
-  res.send({ message: 'Ok api is working 🚀' });
+  try {
+    const { id } = req.params
+    const product = await prisma.product.findUnique({
+      where: { id: Number(id) },
+      include: { category: true }
+    })
+    res.json(product)
+  } catch (error) {
+    next(error)
+  }
 });
 
 router.patch('/products/:id', async (req, res, next) => {
