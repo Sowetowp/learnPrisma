@@ -21,7 +21,7 @@ PATCH   http://localhost:3000/api/products/3
 Content-Type: application/json
 
 {
-    "name": "iphone 12 pro max",
+    "name": "ipad pro max",
     "price": 1299,
     "categoryId": 2
 }
