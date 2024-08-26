@@ -19,7 +19,7 @@ router.get('/products', async (req, res, next) => {
 
 router.get('/products/:id', async (req, res, next) => {
   try {
-    res.send({ message: 'Ok api is working 🚀' });
+    const {id}
   } catch (error) {
     next(error)
   }
