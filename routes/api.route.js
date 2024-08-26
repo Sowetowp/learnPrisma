@@ -59,7 +59,15 @@ router.delete('/products/:id', async (req, res, next) => {
 });
 
 router.patch('/products/:id', async (req, res, next) => {
-  res.send({ message: 'Ok api is working 🚀' });
+  try {
+    const { id } = req.params
+    const deletedProduct = await prisma.product.delete({
+      where: { id: Number(id) }
+    })
+    res.json(deletedProduct)
+  } catch (error) {
+    next(error)
+  }
 });
 
 module.exports = router;
