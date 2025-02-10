@@ -50,6 +50,7 @@ router.post('/products', async (req, res, next) => {
 router.delete('/products/:id', async (req, res, next) => {
   try {
     const { id } = req.params
+
     const deletedProduct = await prisma.product.delete({
       where: { id: Number(id) }
     })
